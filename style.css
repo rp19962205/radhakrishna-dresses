@@ -1,0 +1,194 @@
+:root {
+  --primary-color: #C71585;
+  --secondary-color: #25D366;
+  --hover-color: #1ebe5b;
+  --text-color: white;
+  --font-main: 'Arial', sans-serif;
+}
+
+/* RESET */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* HEADER BACKGROUND */
+header {
+  background-color: #000;
+  height: 230px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* CENTERED HEADER TEXT */
+.header-title-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 100%;
+  pointer-events: none;
+}
+
+.site-title {
+  color: var(--text-color);
+  font-size: 50px;
+  font-weight: bold;
+  font-family: var(--font-main);
+  letter-spacing: 2px;
+}
+
+.site-subtitle {
+  color: var(--text-color);
+  font-size: 22px;
+  font-family: var(--font-main);
+  letter-spacing: 1px;
+  margin-top: 10px;
+}
+
+/* CIRCULAR LOGO LEFT */
+.logo-wrapper {
+  width: 360px;
+  height: 360px;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: -52px;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border: 4px solid white;
+}
+
+.logo {
+  max-width: 70%;
+  max-height: 70%;
+  object-fit: contain;
+}
+
+/* CIRCLE RIGHT */
+.circle-group {
+  position: absolute;
+  top: 50%;
+  right: 55px;
+  transform: translateY(-50%);
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  background-color: #000;
+  border: 10px solid white;
+  outline: 6px solid var(--primary-color);
+}
+
+.rk-logo {
+  width: 110%;
+  height: 115%;
+  object-fit: contain;
+  display: block;
+  margin: -7px;
+}
+
+/* INSTAGRAM SECTION */
+.instagram-wrapper {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.instagram-section {
+  padding: 80px 0 40px;
+  background-color: #f8f8f8;
+}
+
+/* ENQUIRY FORM */
+.enquiry-form-section {
+  max-width: 450px;
+  margin: 60px auto;
+  padding: 30px;
+  background: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-family: var(--font-main);
+}
+
+.enquiry-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.enquiry-form label {
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.enquiry-form input,
+.enquiry-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+  font-family: inherit;
+  box-sizing: border-box;
+  display: block;
+}
+
+.enquiry-form input:focus,
+.enquiry-form textarea:focus {
+  outline: 2px solid var(--primary-color);
+  border-color: var(--primary-color);
+  background: #fffefc;
+}
+
+.enquiry-form button {
+  padding: 14px;
+  font-size: 16px;
+  color: #fff;
+  background: var(--secondary-color);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.enquiry-form button:hover {
+  background: var(--hover-color);
+}
+
+/* RESPONSIVE STYLES */
+@media (max-width: 768px) {
+  header {
+    height: auto;
+    padding: 20px 10px;
+  }
+
+  .site-title {
+    font-size: 34px;
+  }
+
+  .site-subtitle {
+    font-size: 18px;
+  }
+
+  .logo-wrapper {
+    width: 180px;
+    height: 180px;
+    left: 10px;
+  }
+
+  .circle-group {
+    width: 100px;
+    height: 100px;
+    right: 15px;
+  }
+
+  .instagram-section {
+    padding-top: 120px;
+  }
+}
